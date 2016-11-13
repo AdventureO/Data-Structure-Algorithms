@@ -1,45 +1,4 @@
 counter = 0
-"""
-def merge(left, right):
-    global counter
-    A, i ,j = [], 0, 0
-    while i < len(left) and j < len(right):
-        counter += 1
-        if left[i] <= right[j]:
-            A.append(left[i])
-            i += 1
-        else:
-            A.append(right[j])
-            j += 1
-        counter += 1
-    A += left[i:]
-    A += right[j:]
-    return A
-
-
-def _merge_sort(A):
-    if len(A) > 1:
-        q = len(A) // 2
-        left = _merge_sort(A[:q])
-        right = _merge_sort(A[q:])
-        return merge(left, right)
-
-    return A
-
-def merge_sort(A):
-    global counter
-    _merge_sort(A)
-    lol = counter
-    counter = 0
-    return A, lol
-
-lst = [0,1,2,3,4,5,6,7,8,10]
-print(merge_sort(lst))
-
-lst1 = [10, 9, 8, 7, 6,5,4,3,2,1]
-print(merge_sort(lst1))
-"""
-
 def _merge_sort(A):
     global counter
     if len(A)>1:

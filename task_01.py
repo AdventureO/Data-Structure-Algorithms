@@ -1,3 +1,4 @@
+""""""
 def insertSort(A):
     for j in range(1, len(A)):
 
@@ -9,7 +10,6 @@ def insertSort(A):
                     A[position+1] = A[position]
                     position = position - 1
                 else:
-                #elif A[position] == key or (A[position] % 2 == 0 and A[position] < key):
                     break
                 A[position + 1] = key
 

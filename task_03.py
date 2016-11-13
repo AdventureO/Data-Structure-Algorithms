@@ -1,5 +1,4 @@
 lst1 = []
-
 def quick_sort(lst):
     quick_sort_helper(lst, 0, len(lst) - 1)
 
@@ -34,7 +33,6 @@ def partition(lst, start, end):
 
 
 lst = [0, 1, 2, 2, 3, 5, 5, 6, 7, 9]
-#lst = [9, 7, 6, 5, 5, 3, 2, 2, 1, 0]
 quick_sort(lst)
 print(lst, sum(lst1))
 
@@ -121,4 +119,3 @@ def swap( A, x, y ):
 alist = [9, 7, 6, 5, 5, 3, 2, 2, 1, 0]
 quicksort(alist)
 print(alist)
-"""

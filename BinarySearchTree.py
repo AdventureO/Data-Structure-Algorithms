@@ -44,22 +44,22 @@ class BinarySearchTree(object):
         else:
             return 1 + self.size(node.left) + self.size(node.right)
 
-    def inorder(self, node):
+    def in_order(self, node):
         if node:
-            self.inorder(node.left)
+            self.in_order(node.left)
             print(node.data)
-            self.inorder(node.right)
+            self.in_order(node.right)
 
-    def preorder(self, node):
+    def pre_order(self, node):
         if node:
             print(node.data)
-            self.preorder(node.left)
-            self.preorder(node.right)
+            self.pre_order(node.left)
+            self.pre_order(node.right)
 
-    def postorder(self, node):
+    def post_order(self, node):
         if node:
-            self.postorder(node.left)
-            self.postorder(node.right)
+            self.post_order(node.left)
+            self.post_order(node.right)
             print(node.data)
 
     def get_min(self, node):
@@ -105,20 +105,6 @@ class BinarySearchTree(object):
                 queue.append(current_node.right)
           print("".join(out))
 
-    def find_and_parent(self, x):
-        '''Search for x, returning the node containing x and its parent.
-        If x doesn't exist, we return None and x's would-be parent.'''
-        q = None           # parent
-        p = self.root      # current node
-        while p is not None and p.data != x:
-            q = p
-            if x < p.data:
-                p = p.left
-            else:
-                p = p.right
-        return p, q
-
-
 
 tree = BinarySearchTree()
 arr = [100, 20, 500, 30, 10, 40]
@@ -126,15 +112,13 @@ arr = [100, 20, 500, 30, 10, 40]
 for x in arr:
     tree.insert(x)
 
-print(tree.find_and_parent(10))
-
 print(tree.successor(tree.get_root()))
 tree.binary_tree_present()
 print("In-order Traversal: ")
-tree.inorder(tree.get_root())
+tree.in_order(tree.get_root())
 print("Pre-order Traversal: ")
-tree.preorder(tree.get_root())
+tree.pre_order(tree.get_root())
 print("Post-order Traversal: ")
-tree.postorder(tree.get_root())
+tree.post_order(tree.get_root())
 
 
